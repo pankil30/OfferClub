@@ -16,7 +16,7 @@ export default function NewArrivalsPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+
 
       {/* HERO SECTION */}
       <section className="bg-black text-white text-center py-16">
@@ -90,7 +90,7 @@ export default function NewArrivalsPage() {
 
       </section>
 
-      <Footer />
+   
     </div>
   )
 }

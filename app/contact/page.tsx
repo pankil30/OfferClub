@@ -59,11 +59,10 @@ export default function ContactPage() {
 
   return (
     <>
-      <Header />
+  
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="bg-secondary py-16 md:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-secondary/30 py-12 md:py-20"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground text-balance mb-4">
               Contact Us
             </h1>
@@ -220,7 +219,7 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-      <Footer />
+
     </>
   )
 }

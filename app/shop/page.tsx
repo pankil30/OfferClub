@@ -32,44 +32,45 @@ export default function ShopPage() {
   })
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      {/* Main Content */}
-      <div className="flex-1">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+    <div className="flex-1">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
 
-            {/* Products Grid */}
-            <div className="lg:col-span-4">
+        {/* Page Header */}
+        <div className="mb-8">
+          <h1 className="text-2xl md:text-4xl font-bold">
+            Shop
+          </h1>
 
-              {/* Products */}
-              {sortedProducts.length > 0 ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                  {sortedProducts.map((product) => (
-                    <ProductCard
-                      key={product.id}
-                      id={product.id}
-                      name={product.name}
-                      price={product.price}
-                      salePrice={product.salePrice}
-                      image={product.images?.[0] || '/images/placeholder.png'}
-                      category={product.category}
-                    />
-                  ))}
-                </div>
-              ) : (
-                <div className="text-center py-12">
-                  <p className="text-muted-foreground">
-                    No products found. Try adjusting your filters.
-                  </p>
-                </div>
-              )}
-            </div>
-          </div>
+          <p className="mt-2 text-sm md:text-base text-muted-foreground">
+            {sortedProducts.length} Products Available
+          </p>
         </div>
-      </div>
 
-      <Footer />
+        {/* Products */}
+        {sortedProducts.length > 0 ? (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {sortedProducts.map((product) => (
+              <ProductCard
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                price={product.price}
+                salePrice={product.salePrice}
+                image={product.images?.[0] || '/images/placeholder.png'}
+                category={product.category}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-16">
+            <p className="text-muted-foreground">
+              No products found.
+            </p>
+          </div>
+        )}
+
+      </div>
     </div>
+
   )
 }

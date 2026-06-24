@@ -4,7 +4,6 @@ import Footer from '@/components/footer'
 export default function ReturnsPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
 
       {/* Hero */}
       <section className="bg-secondary border-b border-border">
@@ -97,7 +96,7 @@ export default function ReturnsPage() {
         </div>
       </section>
 
-      <Footer />
+  
     </div>
   )
 }

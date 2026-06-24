@@ -70,11 +70,11 @@ export default function AccountPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+  
 
       {/* Page Header */}
-      <section className="bg-secondary border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <section className="bg-secondary/30 py-12 md:py-20">
+   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl font-bold text-foreground">My Account</h1>
         </div>
       </section>
@@ -384,7 +384,6 @@ export default function AccountPage() {
         </div>
       </div>
 
-      <Footer />
     </div>
   )
 }

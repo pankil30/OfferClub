@@ -30,18 +30,18 @@ const values = [
 export default function AboutPage() {
   return (
     <>
-      <Header />
+
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="bg-secondary py-16 md:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground text-balance mb-4">
-              About OfferClub
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl">
-              Crafting elegance and luxury for the discerning customer since 2015
-            </p>
-          </div>
+        <section className="bg-secondary/30 py-12 md:py-20"> 
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground text-balance mb-4">
+            About OfferClub
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-2xl">
+            Crafting elegance and luxury for the discerning customer since 2015
+          </p>
+        </div>
         </section>
 
         {/* Story Section */}
@@ -145,7 +145,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   )
 }

@@ -11,7 +11,7 @@ export default function SalePage() {
   const saleProducts = products.filter((p) => p.onSale)
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+   
 
 
       {/* PRODUCTS */}
@@ -91,7 +91,6 @@ export default function SalePage() {
         </div>
       )}
 
-      <Footer />
     </div>
   )
 }

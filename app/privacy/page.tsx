@@ -4,7 +4,7 @@ import Footer from '@/components/footer'
 export default function PrivacyPolicyPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+
 
       {/* Hero Section */}
       <section className="bg-secondary border-b border-border">
@@ -133,7 +133,7 @@ export default function PrivacyPolicyPage() {
         </div>
       </section>
 
-      <Footer />
+
     </div>
   )
 }

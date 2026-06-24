@@ -12,7 +12,7 @@ import {
 export default function ShippingPage() {
     return (
         <div className="flex flex-col min-h-screen">
-            <Header />
+        
 
             {/* Hero */}
             <section className="bg-secondary border-b border-border">
@@ -100,7 +100,7 @@ export default function ShippingPage() {
                 </div>
             </section>
 
-            <Footer />
+  
         </div>
     )
 }

@@ -2,6 +2,8 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import Footer from '@/components/footer'
+import Header from '@/components/header'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
 const geistMono = Geist_Mono({
@@ -16,15 +18,15 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/pp.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/pp.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
+        url: '/pp.png',
         type: 'image/svg+xml',
       },
     ],
@@ -47,10 +49,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} bg-background`}>
-      <body className="font-sans antialiased">
+      {/* <body className="font-sans antialiased">
+        <Header />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
+            <Footer />
+      </body> */}
+
+      <body className="font-sans antialiased min-h-screen flex flex-col">
+        <Header />
+
+        <main className="flex-1">
+          {children}
+        </main>
+
+        {process.env.NODE_ENV === 'production' && <Analytics />}
+
+        <Footer />
       </body>
+
     </html>
   )
 }

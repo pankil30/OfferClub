@@ -22,8 +22,8 @@ export default function Emailpage() {
   const [error, setError] = useState('')
 
   const validateEmail = (email: string) => {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-}
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+  }
 
   useEffect(() => {
     const savedCart = localStorage.getItem('cart')
@@ -44,17 +44,17 @@ export default function Emailpage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+
 
       {/* Page Header */}
-      <section className="bg-secondary border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <section className="bg-secondary/30 py-10 md:py-15">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl font-bold text-foreground">
             Checkout
           </h1>
         </div>
       </section>
-   <div className="flex justify-center py-7 ">
+      <div className="flex justify-center py-7 ">
         <div className="w-full max-w-3xl bg-card rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-10">
 
           <h2 className="text-3xl font-bold text-foreground mb-7">
@@ -146,17 +146,17 @@ export default function Emailpage() {
                       Email Address
                     </label>
 
-                 <input
-  type="email"
-  value={email}
-  onChange={(e) => {
-    setEmail(e.target.value)
-    setError('')
-  }}
-  className="w-full px-4 py-3 border border-border rounded-md bg-background 
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => {
+                        setEmail(e.target.value)
+                        setError('')
+                      }}
+                      className="w-full px-4 py-3 border border-border rounded-md bg-background 
   focus:outline-none focus:ring-2 focus:ring-primary"
-  placeholder="Enter your email address"
-/>
+                      placeholder="Enter your email address"
+                    />
                     {error && (
                       <p className="text-red-500 text-sm mt-2">{error}</p>
                     )}
@@ -164,21 +164,21 @@ export default function Emailpage() {
 
                 </div>
 
-               <button
-  type="button"
-  onClick={() => {
-    if (!validateEmail(email)) {
-      setError('Please enter a valid email address')
-      return
-    }
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (!validateEmail(email)) {
+                      setError('Please enter a valid email address')
+                      return
+                    }
 
-    router.push('/Next') // next step
-  }}
-  className="w-full py-4 bg-primary text-primary-foreground font-semibold rounded-md 
+                    router.push('/Next') // next step
+                  }}
+                  className="w-full py-4 bg-primary text-primary-foreground font-semibold rounded-md 
   hover:opacity-90 transition"
->
-  Next
-</button>
+                >
+                  Next
+                </button>
 
               </form>
 
@@ -189,7 +189,7 @@ export default function Emailpage() {
         </div>
       </div>
 
-      <Footer />
+
     </div>
   )
 }

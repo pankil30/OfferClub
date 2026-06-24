@@ -28,7 +28,7 @@ export default function ThankYouPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+ 
 
       {/* Main Content */}
       <div className="flex-1 flex items-center justify-center px-4 py-16 bg-secondary">
@@ -97,7 +97,7 @@ export default function ThankYouPage() {
         </div>
       </div>
 
-      <Footer />
+    
     </div>
   )
 }

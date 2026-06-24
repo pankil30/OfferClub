@@ -56,7 +56,7 @@ export default async function ProductDetailPage({
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+
 
       {/* Breadcrumb */}
       <div className="bg-secondary border-b border-border">
@@ -260,7 +260,6 @@ export default async function ProductDetailPage({
         </div>
       </section>
 
-      <Footer />
     </div>
   )
 }

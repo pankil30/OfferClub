@@ -27,6 +27,18 @@ export default function Header() {
   }
 
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isMenuOpen])
+
   const pathname = usePathname()
   const navLinks = [
     { name: 'Shop', href: '/shop' },
@@ -57,14 +69,17 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14 md:h-16">
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
-              <span className="text-primary-foreground font-serif text-lg">OC</span>
+            <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center shrink-0">
+              <span className="text-primary-foreground font-bold text-sm">
+                OC
+              </span>
             </div>
-            <span className="font-serif text-xl font-bold text-foreground hidden sm:inline">
+
+            <span className="font-bold text-lg md:text-xl text-foreground">
               OfferClub
             </span>
           </Link>
@@ -76,8 +91,8 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={`relative pb-1 transition-colors hover:text-primary ${pathname === link.href
-                    ? 'text-primary border-b-2 border-primary'
-                    : 'text-foreground'
+                  ? 'text-primary border-b-2 border-primary'
+                  : 'text-foreground'
                   }`}
               >
                 {link.name}
@@ -85,7 +100,7 @@ export default function Header() {
             ))}
           </nav>
           {showSearch && (
-            <div className="absolute top-16 left-0 w-full bg-background border-b border-border shadow-lg z-50">
+            <div className="fixed top-14 md:top-16 left-0 right-0 bg-background border-b border-border shadow-lg z-[60] max-h-[70vh] overflow-y-auto">
 
               {/* Search input */}
               <div className="max-w-3xl mx-auto p-4 flex gap-2">
@@ -176,6 +191,44 @@ export default function Header() {
               className="md:hidden p-2"
             >
               {isMenuOpen ? <X /> : <Menu />}
+              {isMenuOpen && (
+                <>
+                  {/* Backdrop */}
+                  <div
+                    className="fixed inset-0 bg-black/40 z-40 md:hidden"
+                    onClick={() => setIsMenuOpen(false)}
+                  />
+
+                  {/* Menu */}
+                  <div className="fixed top-14 left-0 right-0 bg-background border-b border-border z-50 md:hidden animate-in slide-in-from-top duration-200">
+
+                    <nav className="flex flex-col p-4">
+
+                      {navLinks.map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          onClick={() => setIsMenuOpen(false)}
+                          className={`py-4 border-b border-border text-base font-medium ${pathname === link.href
+                            ? 'text-primary'
+                            : 'text-foreground'
+                            }`}
+                        >
+                          {link.name}
+                        </Link>
+                      ))}
+
+                      <Link
+                        href="/cart"
+                        onClick={() => setIsMenuOpen(false)}
+                        className="py-4 border-b border-border"
+                      >
+                        Cart ({cartCount})
+                      </Link>
+                    </nav>
+                  </div>
+                </>
+              )}
             </button>
           </div>
         </div>
