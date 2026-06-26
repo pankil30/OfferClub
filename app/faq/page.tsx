@@ -167,7 +167,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 export default function FAQPage() {
   return (
     <>
-      <Header />
+
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="bg-secondary py-16 md:py-24">
@@ -219,7 +219,7 @@ export default function FAQPage() {
           </div>
         </section>
       </main>
-      <Footer />
+
     </>
   )
 }

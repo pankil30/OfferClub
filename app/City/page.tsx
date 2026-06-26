@@ -43,14 +43,14 @@ export default function Citypage() {
 
 
       {/* Page Header */}
-     <section className="bg-secondary/30 py-10 md:py-15">
-   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-secondary/30 py-10 md:py-15">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl font-bold text-foreground">
             Checkout
           </h1>
         </div>
       </section>
-  <div className="flex justify-center py-7 ">
+      <div className="flex justify-center py-7 ">
         <div className="w-full max-w-3xl bg-card rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-10">
 
           <h2 className="text-3xl font-bold text-foreground mb-7">
@@ -63,7 +63,7 @@ export default function Citypage() {
 
                 <div className="relative h-28 w-28 overflow-hidden rounded-xl flex-shrink-0 bg-secondary">
                   <Image
-                  src={item.image || '/images/placeholder.png'}
+                    src={item.image || '/images/placeholder.png'}
                     alt={item.name}
                     fill
                     className="object-cover"
@@ -121,7 +121,7 @@ export default function Citypage() {
         </div>
       </div>
       {/* Main Content */}
-        <div className="flex justify-center py-7 mb-10">
+      <div className="flex justify-center py-7 mb-10">
         <div className="w-full max-w-3xl bg-card rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-10">
 
 
@@ -183,7 +183,18 @@ export default function Citypage() {
             </div>
 
           </div>
-
+          <div className="rounded-xl border-l-4 border-yellow-400 bg-black-50  shadow-md mt-5">
+            <p className="text-yellow-100 text-l leading-6 ml-2 my-0 p-2">
+              Please ensure that the information you provide is accurate and
+              complete. Your name, contact details, and address will be used for
+              order processing and timely delivery. Any mistakes in the details may
+              cause delays or failed deliveries. Double-check your entries before
+              proceeding to the next step. Providing a valid phone number and email
+              address will also help us contact you for updates regarding your
+              order. We value your trust and make every effort to ensure a smooth
+              and hassle-free shopping experience. Thank you for choosing us!
+            </p>
+          </div>
         </div>
       </div>
 

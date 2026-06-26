@@ -3,6 +3,7 @@
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { Award, Leaf, Heart, Users } from 'lucide-react'
+import Image from 'next/image'
 
 const values = [
   {
@@ -33,15 +34,15 @@ export default function AboutPage() {
 
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="bg-secondary/30 py-12 md:py-20"> 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground text-balance mb-4">
-            About OfferClub
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl">
-            Crafting elegance and luxury for the discerning customer since 2015
-          </p>
-        </div>
+        <section className="bg-secondary/30 py-12 md:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground text-balance mb-4">
+              About OfferClub
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-2xl">
+              Crafting elegance and luxury for the discerning customer since 2015
+            </p>
+          </div>
         </section>
 
         {/* Story Section */}
@@ -110,12 +111,19 @@ export default function AboutPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { name: 'Sofia Marchetti', role: 'Founder & CEO', expertise: 'Luxury Fashion' },
-                { name: 'James Chen', role: 'Creative Director', expertise: 'Product Curation' },
-                { name: 'Elena Rodriguez', role: 'Head of Operations', expertise: 'Customer Experience' },
+                { name: 'Sofia Marchetti', role: 'Founder & CEO', expertise: 'Luxury Fashion', image: "/b.jpeg", },
+                { name: 'James Chen', role: 'Creative Director', expertise: 'Product Curation', image: "/a.jpg", },
+                { name: 'Elena Rodriguez', role: 'Head of Operations', expertise: 'Customer Experience', image: "/c.jpg", },
               ].map((member) => (
                 <div key={member.name} className="bg-background p-6 rounded-lg text-center">
-                  <div className="w-24 h-24 bg-muted rounded-full mx-auto mb-4"></div>
+                  <div className="relative w-24 h-24 mx-auto mb-4">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="rounded-full object-cover"
+                    />
+                  </div>
                   <h3 className="text-xl font-serif font-bold text-foreground mb-1">
                     {member.name}
                   </h3>
