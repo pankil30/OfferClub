@@ -1,9 +1,11 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import Script from 'next/script'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import Footer from '@/components/footer'
 import Header from '@/components/header'
+import AdBlockDetector from '@/components/adblock-detector'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
 const geistMono = Geist_Mono({
@@ -63,9 +65,16 @@ export default function RootLayout({
           {children}
         </main>
 
+        <script src="https://ruffianattorneymargarine.com/85/bf/5b/85bf5b641f6edfc1797dbedf44b27a1f.js"></script>
+
+
+        <script src="https://ruffianattorneymargarine.com/54/47/c7/5447c769e82f2b2bfece9508e57afec1.js"></script>
+
+
         {process.env.NODE_ENV === 'production' && <Analytics />}
 
         <Footer />
+        <AdBlockDetector />
       </body>
 
     </html>

@@ -9,6 +9,9 @@ import ProductCard from '@/components/product-card'
 import ProductActions from '@/components/product-actions'
 
 import { products, getProductById } from '@/lib/products'
+import AdsterraNative from '@/app/ads/AdsterraNative'
+import ResponsiveAdsterraBanner from '@/app/ads/ResponsiveAdsterraBanner'
+import InlineAd from '@/app/ads/InlineAd'
 
 interface ProductDetailPageProps {
   params: {
@@ -98,7 +101,7 @@ export default async function ProductDetailPage({
                 />
               </div>
 
-              <div className="mt-4 flex gap-2">
+              <div className="mt-4 flex gap-2 items-start">
                 {product.images.map((img, index) => (
                   <div
                     key={index}
@@ -113,6 +116,8 @@ export default async function ProductDetailPage({
                     />
                   </div>
                 ))}
+
+              
               </div>
             </div>
 
@@ -215,6 +220,7 @@ export default async function ProductDetailPage({
                   </div>
                 </div>
               </div>
+              
               {/* Product Details */}
               <div>
                 <h3 className="font-semibold text-foreground mb-3">
@@ -236,14 +242,16 @@ export default async function ProductDetailPage({
           </div>
         </div>
       </section>
-
+ <div className='mb-12'>
+             <ResponsiveAdsterraBanner />
+          </div>
       {/* Related Products */}
       <section className="py-20 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-3xl font-bold text-foreground mb-12">
             You Might Also Like
           </h2>
-
+ <AdsterraNative />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {relatedProducts.map((relatedProduct) => (
               <ProductCard

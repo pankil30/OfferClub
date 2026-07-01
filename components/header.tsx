@@ -6,6 +6,7 @@ import { ShoppingCart, Menu, X, Search, User } from 'lucide-react'
 import { products } from '@/lib/products'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import ResponsiveAdsterraBanner from '@/app/ads/ResponsiveAdsterraBanner'
 
 export default function Header() {
 
@@ -122,7 +123,9 @@ export default function Header() {
                   ✕
                 </button>
               </div>
-
+<div className='mb-8 mt-8 flex row'>
+             <ResponsiveAdsterraBanner />
+          </div>
               {/* Results */}
               <div className="max-w-3xl mx-auto px-4 pb-4 space-y-2">
                 {query && filteredProducts.length === 0 && (

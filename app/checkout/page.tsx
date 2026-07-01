@@ -6,6 +6,8 @@ import Footer from '@/components/footer'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+import AdsterraNative from '../ads/AdsterraNative'
+import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
 
 interface CartItem {
   id: string
@@ -50,6 +52,9 @@ export default function CheckoutPage() {
           </h1>
         </div>
       </section>
+       <div className='mt-8 flex row'>
+             <ResponsiveAdsterraBanner />
+          </div>
       <div className="flex justify-center py-7">
         <div className="w-full max-w-3xl bg-card rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-10">
 
@@ -87,6 +92,8 @@ export default function CheckoutPage() {
             ))}
           </div>
 
+          
+
           <div className="my-5 border-t border-border" />
 
           <div className="space-y-2">
@@ -120,6 +127,10 @@ export default function CheckoutPage() {
 
         </div>
       </div>
+
+     <div className="w-full max-w-3xl mx-auto flex justify-center items-center">
+  <AdsterraNative />
+</div>
       {/* Main Content */}
       <div className="flex justify-center py-7 mb-10">
         <div className="w-full max-w-3xl bg-card rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-10">

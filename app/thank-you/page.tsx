@@ -5,6 +5,8 @@ import { useEffect } from 'react'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { useRouter } from 'next/navigation'
+import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
+import AdsterraNative from '../ads/AdsterraNative'
 
 export default function ThankYouPage() {
   const router = useRouter()
@@ -28,15 +30,18 @@ export default function ThankYouPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
- 
+ <div className='mb-8 mt-8 flex row'>
+             <ResponsiveAdsterraBanner />
+          </div>
 
       {/* Main Content */}
       <div className="flex-1 flex items-center justify-center px-4 py-16 bg-secondary">
 
-        <div className="w-full max-w-2xl bg-card border border-border rounded-2xl shadow-lg p-10 text-center">
+        <div className="w-full max-w-4xl bg-card border border-border rounded-2xl shadow-lg p-10 text-center">
 
           {/* Icon */}
           <div className="flex justify-center mb-6">
+            
             <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center">
               <svg
                 className="w-10 h-10 text-green-600"
@@ -92,7 +97,12 @@ export default function ThankYouPage() {
               View Orders
             </Link> */}
 
+             
+
           </div>
+          <div className="w-full max-w-3xl mx-auto flex justify-center items-center mt-6">
+              <AdsterraNative />
+            </div>
 
         </div>
       </div>

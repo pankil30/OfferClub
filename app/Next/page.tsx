@@ -6,6 +6,8 @@ import Footer from '@/components/footer'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
+import AdsterraNative from '../ads/AdsterraNative'
 
 interface CartItem {
   id: string
@@ -48,7 +50,9 @@ export default function Nextpage() {
           </h1>
         </div>
       </section>
-
+<div className='mt-8 flex row'>
+             <ResponsiveAdsterraBanner />
+          </div>
       {/* MAIN LAYOUT */}
       <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
 
@@ -88,6 +92,7 @@ export default function Nextpage() {
           </div>
 
         </div>
+         
 
         {/* RIGHT - SUMMARY + BUTTON */}
         <div className="space-y-6">
@@ -150,10 +155,15 @@ export default function Nextpage() {
             </p>
 
           </div>
+           
 
         </div>
+        
 
       </div>
+       <div className="w-full max-w-3xl mx-auto flex justify-center items-center">
+              <AdsterraNative />
+            </div>
 
    
     </div>

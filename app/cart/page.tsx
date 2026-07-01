@@ -6,6 +6,9 @@ import Footer from '@/components/footer'
 import Image from 'next/image'
 import Link from 'next/link'
 import { X, Plus, Minus, Trash } from 'lucide-react'
+import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
+import AdsterraNative from '../ads/AdsterraNative'
+import PortraitAd from '../ads/PortraitAd'
 
 interface CartItem {
   id: string
@@ -76,19 +79,24 @@ export default function CartPage() {
 
       <div className="flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          
           {isLoading ? (
             <div className="text-center py-20">
               <p className="text-muted-foreground">Loading cart...</p>
             </div>
           ) : cartItems.length > 0 ? (
+            
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+              
               {/* Cart Items */}
               <div className="lg:col-span-2 space-y-5">
                 {cartItems.map((item) => (
                   <div
                     key={item.id}
                     className="border border-border rounded-2xl p-6 bg-card"
-                  >
+                  > <div className='mb-12 flex row'>
+             <ResponsiveAdsterraBanner />
+          </div>
                     <div className="flex gap-6">
                       {/* Product Image */}
                       <Link href={`/products/${item.id}`}>
@@ -101,6 +109,7 @@ export default function CartPage() {
                           />
                         </div>
                       </Link>
+
 
                       {/* Product Details */}
                       <div className="flex-1 flex flex-col justify-between">
@@ -145,6 +154,9 @@ export default function CartPage() {
                         </div>
                       </div>
                     </div>
+                   <div className='mt-10'>
+ <AdsterraNative />
+                   </div>
                   </div>
                 ))}
 
@@ -155,7 +167,6 @@ export default function CartPage() {
                   ← Continue Shopping
                 </Link>
               </div>
-
               {/* Order Summary */}
               <div className="lg:col-span-1">
                 <div className="bg-secondary p-8 rounded-lg sticky top-20">

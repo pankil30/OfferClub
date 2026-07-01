@@ -192,6 +192,9 @@ import Image from 'next/image'
 import { ChevronRight } from 'lucide-react'
 
 import { products } from '@/lib/products'   // ✅ REAL DATA
+import AdsterraNative from './ads/AdsterraNative'
+import AdsterraBanner from './ads/AdsterraBanner'
+import ResponsiveAdsterraBanner from './ads/ResponsiveAdsterraBanner'
 
 export default function Page() {
 
@@ -264,7 +267,8 @@ export default function Page() {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-10">
             Featured Products
           </h2>
-
+          <AdsterraNative/>
+            {/* <AdsterraNative/> */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
 
             {featuredProducts.map((product) => (
@@ -298,9 +302,12 @@ export default function Page() {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-10">
             New Arrivals
           </h2>
+    
+    <div className='mb-13'>
+                   <ResponsiveAdsterraBanner />
+                </div>
 
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
-
             {newArrivals.map((product) => (
               <ProductCard
                 key={product.id}

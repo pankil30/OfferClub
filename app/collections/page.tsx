@@ -98,31 +98,47 @@
 
 'use client'
 
+import React, { useEffect, useState } from 'react'
 import ProductCard from '@/components/product-card'
 import { products } from '@/lib/products'
+import AdsterraNative from '../ads/AdsterraNative'
+import AdsterraBanner from '../ads/AdsterraBanner'
+import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
 
 export default function CollectionsPage() {
-const grouped = products.reduce((acc, product) => {
-const key = product.category
+  const [isMobile, setIsMobile] = useState(false);
 
-if (!acc[key]) {
-  acc[key] = []
-}
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth < 768); // Tailwind md breakpoint
+    };
 
-acc[key].push(product)
+    checkScreen();
+    window.addEventListener('resize', checkScreen);
 
-return acc
+    return () => window.removeEventListener('resize', checkScreen);
+  }, []);
 
-}, {} as Record<string, typeof products>)
+  const grouped = products.reduce((acc, product) => {
+    const key = product.category;
 
-const categories = Object.keys(grouped)
+    if (!acc[key]) {
+      acc[key] = [];
+    }
+
+    acc[key].push(product);
+
+    return acc;
+  }, {} as Record<string, typeof products>);
+
+  const categories = Object.keys(grouped)
 
 return ( <main className="min-h-screen bg-background">
 
   {/* Hero */}
   <section className="bg-secondary/30 py-10 md:py-16">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
+  
       <h1 className="text-3xl md:text-5xl font-bold">
         Our Collections
       </h1>
@@ -130,7 +146,9 @@ return ( <main className="min-h-screen bg-background">
       <p className="mt-3 text-sm md:text-base text-muted-foreground">
         Explore products grouped by category
       </p>
-
+<div className='mt-13'>
+     <ResponsiveAdsterraBanner />
+  </div>
     </div>
   </section>
 
@@ -154,20 +172,30 @@ return ( <main className="min-h-screen bg-background">
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {grouped[category].map((product) => (
-              <ProductCard
-                key={product.id}
-                id={product.id}
-                name={product.name}
-                price={product.price}
-                salePrice={product.salePrice}
-                image={
-                  product.images?.[0] ||
-                  '/images/placeholder.png'
-                }
-                category={product.category}
-              />
+            {grouped[category].map((product, index) => (
+              <React.Fragment key={product.id}>
+                <ProductCard
+                  key={product.id}
+                  id={product.id}
+                  name={product.name}
+                  price={product.price}
+                  salePrice={product.salePrice}
+                  image={
+                    product.images?.[0] ||
+                    '/images/placeholder.png'
+                  }
+                  category={product.category}
+                />
+
+                {/* Show ad after every 12 products */}
+                {(index + 1) % 12 === 0 && index !== grouped[category].length - 1 && (
+                  <div className="col-span-2 md:col-span-3 lg:col-span-4">
+                    <AdsterraNative />
+                  </div>
+                )}
+              </React.Fragment>
             ))}
+            
           </div>
         </div>
       ))}
