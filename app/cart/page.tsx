@@ -9,6 +9,7 @@ import { X, Plus, Minus, Trash } from 'lucide-react'
 import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
 import AdsterraNative from '../ads/AdsterraNative'
 import PortraitAd from '../ads/PortraitAd'
+import router from 'next/router'
 
 interface CartItem {
   id: string
@@ -210,12 +211,21 @@ export default function CartPage() {
                     </span>
                   </div>
 
-                  <Link
-                    href="/checkout"
-                    className="w-full block text-center px-6 py-3 bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity mb-3"
-                  >
-                    Proceed to Checkout
-                  </Link>
+                 <button
+  type="button"
+  className="w-full block text-center px-6 py-3 bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity mb-3"
+  onClick={() => {
+    
+      window.open(
+      "https://ruffianattorneymargarine.com/n61k1bpx3?key=c2414e037cc988772633834d67eb97d6",
+      "_blank",
+      "noopener,noreferrer"
+    );
+    window.location.href = "/checkout";
+  }}
+>
+  Proceed to Checkout
+</button>
 
                   <Link
                     href="/shop"

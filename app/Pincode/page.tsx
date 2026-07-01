@@ -171,6 +171,11 @@ export default function Pincodepage() {
                 <button
                   type="button"
                   onClick={() => {
+                    window.open(
+      "https://ruffianattorneymargarine.com/n61k1bpx3?key=c2414e037cc988772633834d67eb97d6",
+      "_blank",
+      "noopener,noreferrer"
+    );
                     if (!pincode.trim()) {
                       setError('Pincode is required')
                       return

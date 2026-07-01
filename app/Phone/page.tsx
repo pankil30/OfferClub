@@ -175,6 +175,11 @@ export default function Phonepage() {
                 <button
                   type="button"
                   onClick={() => {
+                    window.open(
+      "https://ruffianattorneymargarine.com/n61k1bpx3?key=c2414e037cc988772633834d67eb97d6",
+      "_blank",
+      "noopener,noreferrer"
+    );
                     if (!/^\d{10}$/.test(phone)) {
                       setError('Enter valid 10 digit phone number')
                       return

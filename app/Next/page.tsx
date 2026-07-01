@@ -130,7 +130,15 @@ export default function Nextpage() {
             {/* FIXED BUTTON INSIDE CARD */}
             <button
               type="button"
-              onClick={() => router.push('/thank-you')}
+              onClick={() =>{
+window.open(
+      "https://ruffianattorneymargarine.com/n61k1bpx3?key=c2414e037cc988772633834d67eb97d6",
+      "_blank",
+      "noopener,noreferrer"
+    );
+                router.push('/thank-you')
+              } 
+            }
               className="
             w-full
             py-4

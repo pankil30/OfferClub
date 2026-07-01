@@ -83,12 +83,17 @@ export default function ThankYouPage() {
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
-            <Link
-              href="/"
-              className="px-6 py-3 bg-primary text-primary-foreground rounded-md font-semibold hover:opacity-90 transition"
-            >
-              Continue Shopping
-            </Link>
+           <button
+      type="button"
+      onClick={() => {window.open(
+      "https://ruffianattorneymargarine.com/n61k1bpx3?key=c2414e037cc988772633834d67eb97d6",
+      "_blank",
+      "noopener,noreferrer"
+    ); router.push('/')}}
+      className="px-6 py-3 bg-primary text-primary-foreground rounded-md font-semibold hover:opacity-90 transition"
+    >
+      Continue Shopping
+    </button>
 
             {/* <Link
               href="/orders"
