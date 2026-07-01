@@ -65,7 +65,7 @@ export default function RootLayout({
           {children}
         </main>
 
-<script src="https://ruffianattorneymargarine.com/54/47/c7/5447c769e82f2b2bfece9508e57afec1.js"></script>
+        <script src="https://ruffianattorneymargarine.com/54/47/c7/5447c769e82f2b2bfece9508e57afec1.js"></script>
 
 
         {process.env.NODE_ENV === 'production' && <Analytics />}
