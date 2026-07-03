@@ -203,7 +203,7 @@ export default function Page() {
 
 
   // NEW ARRIVALS (latest products)
-  const newArrivals = [...products].slice(-4).reverse()
+  const newArrivals = [...products].slice(4, 8)
 
   // SALE PRODUCTS (assuming discount or random fallback)
   const saleProducts = products
