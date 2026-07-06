@@ -4,9 +4,11 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Image from 'next/image'
 import Link from 'next/link'
-import { products } from '@/lib/products'
+import ProductLoader from '@/components/product-loader'
+import { useProducts } from '@/lib/use-products'
 
 export default function SalePage() {
+  const { products, loading } = useProducts()
   // Fake discount logic (you can replace with real data later)
   const saleProducts = products.filter((p) => p.onSale)
   return (
@@ -19,7 +21,11 @@ export default function SalePage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-          {saleProducts.map((product) => (
+          {loading ? (
+            <div className="col-span-full">
+              <ProductLoader />
+            </div>
+          ) : saleProducts.map((product) => (
             <div
               key={product.id}
               className="group bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
@@ -80,7 +86,7 @@ export default function SalePage() {
 
         </div>
       </section>
-      {saleProducts.length === 0 && (
+      {!loading && saleProducts.length === 0 && (
         <div className="col-span-full text-center py-20">
           <h3 className="text-2xl font-semibold">
             No Sale Products Available

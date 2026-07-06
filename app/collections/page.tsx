@@ -100,12 +100,14 @@
 
 import React, { useEffect, useState } from 'react'
 import ProductCard from '@/components/product-card'
-import { products } from '@/lib/products'
+import ProductLoader from '@/components/product-loader'
+import { useProducts } from '@/lib/use-products'
 import AdsterraNative from '../ads/AdsterraNative'
 import AdsterraBanner from '../ads/AdsterraBanner'
 import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
 
 export default function CollectionsPage() {
+  const { products, loading } = useProducts()
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -156,7 +158,9 @@ return ( <main className="min-h-screen bg-background">
   <section className="py-8 md:py-16">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      {categories.map((category) => (
+      {loading ? (
+        <ProductLoader />
+      ) : categories.map((category) => (
         <div
           key={category}
           className="mb-10 md:mb-16"

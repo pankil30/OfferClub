@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import ProductCard from '@/components/product-card'
-import { products } from '@/lib/products'
+import ProductLoader from '@/components/product-loader'
+import { useProducts } from '@/lib/use-products'
 import React from 'react'
 import AdsterraNative from '../ads/AdsterraNative'
 import AdsterraBanner from '../ads/AdsterraBanner'
@@ -12,6 +13,7 @@ import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
 
 
 export default function ShopPage() {
+  const { products, loading } = useProducts()
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [selectedPrice, setSelectedPrice] = useState<{ min: number; max: number } | null>(null)
   const [sortBy, setSortBy] = useState('featured')
@@ -72,7 +74,9 @@ export default function ShopPage() {
 
 
        {/* Products */}
-{sortedProducts.length > 0 ? (
+{loading ? (
+  <ProductLoader />
+) : sortedProducts.length > 0 ? (
   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
     {sortedProducts.map((product, index) => (
       <React.Fragment key={product.id}>

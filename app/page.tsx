@@ -182,8 +182,6 @@
 
 
 
-'use client'
-
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import ProductCard from '@/components/product-card'
@@ -191,12 +189,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ChevronRight } from 'lucide-react'
 
-import { products } from '@/lib/products'   // ✅ REAL DATA
+import { getProducts } from '@/lib/products'
 import AdsterraNative from './ads/AdsterraNative'
 import AdsterraBanner from './ads/AdsterraBanner'
 import ResponsiveAdsterraBanner from './ads/ResponsiveAdsterraBanner'
 
-export default function Page() {
+export const dynamic = 'force-dynamic'
+
+export default async function Page() {
+  const products = await getProducts()
 
   // Use real products instead of mock
   const featuredProducts = products.slice(0, 4) // or any logic you want

@@ -1,17 +1,19 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Truck, RotateCcw, ShieldCheck } from 'lucide-react'
 
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import ProductCard from '@/components/product-card'
 import ProductActions from '@/components/product-actions'
+import ProductGallery from '@/components/product-gallery'
 
-import { products, getProductById } from '@/lib/products'
+import { getProducts } from '@/lib/products'
 import AdsterraNative from '@/app/ads/AdsterraNative'
 import ResponsiveAdsterraBanner from '@/app/ads/ResponsiveAdsterraBanner'
 import InlineAd from '@/app/ads/InlineAd'
+
+export const dynamic = 'force-dynamic'
 
 interface ProductDetailPageProps {
   params: {
@@ -43,7 +45,8 @@ export default async function ProductDetailPage({
 
   console.log('ID:', id)
 
-  const product = getProductById(id)
+  const products = await getProducts()
+  const product = products.find((p) => p.id === id)
 
   console.log('PRODUCT:', product)
 
@@ -90,36 +93,7 @@ export default async function ProductDetailPage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Product Image */}
-            <div>
-              <div className="relative aspect-square bg-secondary rounded-lg overflow-hidden">
-                <Image
-                  src={product.images[0] || '/images/placeholder.png'}
-                  alt={product.name}
-                  fill
-                  priority
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="mt-4 flex gap-2 items-start">
-                {product.images.map((img, index) => (
-                  <div
-                    key={index}
-                    className="w-20 h-20 bg-secondary rounded overflow-hidden"
-                  >
-                    <Image
-                      src={img}
-                      alt={`${product.name} ${index + 1}`}
-                      width={80}
-                      height={80}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-
-              
-              </div>
-            </div>
+            <ProductGallery name={product.name} images={product.images} />
 
             {/* Product Info */}
             <div className="space-y-6">

@@ -4,9 +4,11 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Image from 'next/image'
 import Link from 'next/link'
-import { products } from '@/lib/products'
+import ProductLoader from '@/components/product-loader'
+import { useProducts } from '@/lib/use-products'
 
 export default function NewArrivalsPage() {
+  const { products, loading } = useProducts()
 
   // Simulate "new arrivals" (you can replace with real API field like createdAt)
   const newArrivals = products
@@ -29,7 +31,9 @@ export default function NewArrivalsPage() {
       {/* PRODUCTS GRID */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
 
-        {newArrivals.length === 0 ? (
+        {loading ? (
+          <ProductLoader />
+        ) : newArrivals.length === 0 ? (
           <p className="text-center text-muted-foreground">
             No new products available.
           </p>

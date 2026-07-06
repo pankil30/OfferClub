@@ -3,12 +3,13 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ShoppingCart, Menu, X, Search, User } from 'lucide-react'
-import { products } from '@/lib/products'
+import { useProducts } from '@/lib/use-products'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import ResponsiveAdsterraBanner from '@/app/ads/ResponsiveAdsterraBanner'
 
 export default function Header() {
+  const { products, loading } = useProducts()
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [cartCount, setCartCount] = useState(0)
@@ -128,11 +129,15 @@ export default function Header() {
           </div>
               {/* Results */}
               <div className="max-w-3xl mx-auto px-4 pb-4 space-y-2">
-                {query && filteredProducts.length === 0 && (
+                {query && loading && (
+                  <p className="text-muted-foreground">Loading products...</p>
+                )}
+
+                {query && !loading && filteredProducts.length === 0 && (
                   <p className="text-muted-foreground">No products found</p>
                 )}
 
-                {filteredProducts.map((product) => (
+                {!loading && filteredProducts.map((product) => (
                   <Link
                     key={product.id}
                     href={`/products/${product.id}`}
