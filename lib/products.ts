@@ -34,6 +34,7 @@ interface ProductsResponse {
 }
 
 export const PRODUCTS_API_URL = 'http://loanpeoffer.soon.it/api/get.php'
+const IMAGE_PROXY_PATH = '/api/image-proxy'
 
 const toNumber = (value: unknown, fallback = 0) => {
   const numberValue = Number(value)
@@ -63,6 +64,14 @@ const toStringArray = (value: unknown) => {
   return []
 }
 
+export const getProxiedImageUrl = (url: string) => {
+  if (!url || url.startsWith('/') || url.startsWith(IMAGE_PROXY_PATH)) {
+    return url
+  }
+
+  return `${IMAGE_PROXY_PATH}?url=${encodeURIComponent(url)}`
+}
+
 export const normalizeProduct = (product: ApiProduct): Product => {
   const price = toNumber(product.price)
   const salePrice = product.salePrice ? toNumber(product.salePrice) : undefined
@@ -80,7 +89,7 @@ export const normalizeProduct = (product: ApiProduct): Product => {
     discountPercent: product.discountPercent
       ? toNumber(product.discountPercent)
       : undefined,
-    images: toStringArray(product.images),
+    images: toStringArray(product.images).map(getProxiedImageUrl),
     createdAt: product.created_at,
   }
 }
