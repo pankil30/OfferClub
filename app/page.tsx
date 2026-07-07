@@ -200,8 +200,10 @@ export default async function Page() {
   const products = await getProducts()
 
   // Use real products instead of mock
-  const featuredProducts = products.slice(0, 4) // or any logic you want
-
+const featuredProducts = [
+  ...products.slice(9, 12), // index 9,10,11
+  ...products.slice(8, 9),  // index 8
+];
 
   // NEW ARRIVALS (latest products)
   const newArrivals = [...products].slice(4, 8)
