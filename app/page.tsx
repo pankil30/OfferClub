@@ -225,7 +225,7 @@ const featuredProducts = [
             <div className="space-y-6 md:space-y-8">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                 Curated Luxury for the Discerning Taste
-              </h1>
+              </h1> 
 
               <p className="text-base md:text-lg text-muted-foreground max-w-md">
                 Discover premium products crafted for elegance and modern lifestyle.
