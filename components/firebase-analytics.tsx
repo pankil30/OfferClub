@@ -15,7 +15,7 @@ export default function FirebaseAnalytics() {
           return
         }
 
-        logEvent(analytics, 'pathname', {
+        logEvent(analytics, pathname, {
           page_path: pathname,
           page_location: window.location.href,
           page_title: document.title,
