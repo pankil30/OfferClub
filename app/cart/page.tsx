@@ -68,7 +68,7 @@ export default function CartPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-  
+
 
       <section className="bg-secondary border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -80,15 +80,15 @@ export default function CartPage() {
 
       <div className="flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          
+
           {isLoading ? (
             <div className="text-center py-20">
               <p className="text-muted-foreground">Loading cart...</p>
             </div>
           ) : cartItems.length > 0 ? (
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-              
+
               {/* Cart Items */}
               <div className="lg:col-span-2 space-y-5">
                 {cartItems.map((item) => (
@@ -96,8 +96,8 @@ export default function CartPage() {
                     key={item.id}
                     className="border border-border rounded-2xl p-6 bg-card"
                   > <div className='mb-12 flex row'>
-             <ResponsiveAdsterraBanner />
-          </div>
+                      <ResponsiveAdsterraBanner />
+                    </div>
                     <div className="flex gap-6">
                       {/* Product Image */}
                       <Link href={`/products/${item.id}`}>
@@ -139,11 +139,11 @@ export default function CartPage() {
                         {/* Bottom */}
                         <div className="flex justify-between items-end mt-8">
                           {/* Quantity */}
-                         <div className="flex items-center justify-center">
-  <span className="px-4 py-2 border border-border rounded-lg">
-    Qty: {item.quantity}
-  </span>
-</div>
+                          <div className="flex items-center justify-center">
+                            <span className="px-4 py-2 border border-border rounded-lg">
+                              Qty: {item.quantity}
+                            </span>
+                          </div>
 
                           {/* Delete */}
                           <button
@@ -155,9 +155,9 @@ export default function CartPage() {
                         </div>
                       </div>
                     </div>
-                   <div className='mt-10'>
- <AdsterraNative />
-                   </div>
+                    <div className='mt-10'>
+                      <AdsterraNative />
+                    </div>
                   </div>
                 ))}
 
@@ -211,21 +211,21 @@ export default function CartPage() {
                     </span>
                   </div>
 
-                 <button
-  type="button"
-  className="w-full block text-center px-6 py-3 bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity mb-3"
-  onClick={() => {
-    
-      window.open(
-      "https://ruffianattorneymargarine.com/n61k1bpx3?key=c2414e037cc988772633834d67eb97d6",
-      "_blank",
-      "noopener,noreferrer"
-    );
-    window.location.href = "/checkout";
-  }}
->
-  Proceed to Checkout
-</button>
+                  <button
+                    type="button"
+                    className="w-full block text-center px-6 py-3 bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity mb-3"
+                    onClick={() => {
+
+                      window.open(
+                        "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
+                        "_blank",
+                        "noopener,noreferrer"
+                      );
+                      window.location.href = "/checkout";
+                    }}
+                  >
+                    Proceed to Checkout
+                  </button>
 
                   <Link
                     href="/shop"

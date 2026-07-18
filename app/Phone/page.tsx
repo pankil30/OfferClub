@@ -43,20 +43,20 @@ export default function Phonepage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-     
+
 
       {/* Page Header */}
-     <section className="bg-secondary/30 py-10 md:py-15">
-   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-secondary/30 py-10 md:py-15">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl font-bold text-foreground">
             Checkout
           </h1>
         </div>
       </section>
-       <div className='mt-8 flex row'>
-             <ResponsiveAdsterraBanner />
-          </div>
-    <div className="flex justify-center py-7 ">
+      <div className='mt-8 flex row'>
+        <ResponsiveAdsterraBanner />
+      </div>
+      <div className="flex justify-center py-7 ">
         <div className="w-full max-w-3xl bg-card rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-10">
 
           <h2 className="text-3xl font-bold text-foreground mb-7">
@@ -69,7 +69,7 @@ export default function Phonepage() {
 
                 <div className="relative h-28 w-28 overflow-hidden rounded-xl flex-shrink-0 bg-secondary">
                   <Image
-                   src={item.image || '/images/placeholder.png'}
+                    src={item.image || '/images/placeholder.png'}
                     alt={item.name}
                     fill
                     className="object-cover"
@@ -126,11 +126,11 @@ export default function Phonepage() {
 
         </div>
       </div>
-        <div className="w-full max-w-3xl mx-auto flex justify-center items-center">
-              <AdsterraNative />
-            </div>
+      <div className="w-full max-w-3xl mx-auto flex justify-center items-center">
+        <AdsterraNative />
+      </div>
       {/* Main Content */}
-  <div className="flex justify-center py-7 mb-10">
+      <div className="flex justify-center py-7 mb-10">
         <div className="w-full max-w-3xl bg-card rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-10">
 
 
@@ -176,10 +176,10 @@ export default function Phonepage() {
                   type="button"
                   onClick={() => {
                     window.open(
-      "https://ruffianattorneymargarine.com/n61k1bpx3?key=c2414e037cc988772633834d67eb97d6",
-      "_blank",
-      "noopener,noreferrer"
-    );
+                      "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
+                      "_blank",
+                      "noopener,noreferrer"
+                    );
                     if (!/^\d{10}$/.test(phone)) {
                       setError('Enter valid 10 digit phone number')
                       return
@@ -199,7 +199,7 @@ export default function Phonepage() {
             </div>
 
           </div>
- <div className="rounded-xl border-l-4 border-yellow-400 bg-black-50  shadow-md mt-5">
+          <div className="rounded-xl border-l-4 border-yellow-400 bg-black-50  shadow-md mt-5">
             <p className="text-yellow-100 text-l leading-6 ml-2 my-0 p-2">
               Please ensure that the information you provide is accurate and
               complete. Your name, contact details, and address will be used for

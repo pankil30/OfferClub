@@ -52,9 +52,9 @@ export default function Citypage() {
           </h1>
         </div>
       </section>
-       <div className='mt-8 flex row'>
-             <ResponsiveAdsterraBanner />
-          </div>
+      <div className='mt-8 flex row'>
+        <ResponsiveAdsterraBanner />
+      </div>
       <div className="flex justify-center py-7 ">
         <div className="w-full max-w-3xl bg-card rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-10">
 
@@ -125,9 +125,9 @@ export default function Citypage() {
 
         </div>
       </div>
-        <div className="w-full max-w-3xl mx-auto flex justify-center items-center">
-                    <AdsterraNative />
-                  </div>
+      <div className="w-full max-w-3xl mx-auto flex justify-center items-center">
+        <AdsterraNative />
+      </div>
       {/* Main Content */}
       <div className="flex justify-center py-7 mb-10">
         <div className="w-full max-w-3xl bg-card rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-10">
@@ -172,10 +172,10 @@ export default function Citypage() {
                   type="button"
                   onClick={() => {
                     window.open(
-      "https://ruffianattorneymargarine.com/n61k1bpx3?key=c2414e037cc988772633834d67eb97d6",
-      "_blank",
-      "noopener,noreferrer"
-    );
+                      "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
+                      "_blank",
+                      "noopener,noreferrer"
+                    );
                     if (!city.trim()) {
                       setError('City is required')
                       return

@@ -53,9 +53,9 @@ export default function Addresspage() {
                     </h1>
                 </div>
             </section>
-             <div className='mt-8 flex row'>
-             <ResponsiveAdsterraBanner />
-          </div>
+            <div className='mt-8 flex row'>
+                <ResponsiveAdsterraBanner />
+            </div>
             <div className="flex justify-center py-7 ">
                 <div className="w-full max-w-3xl bg-card rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-10">
 
@@ -126,8 +126,8 @@ export default function Addresspage() {
 
                 </div>
             </div>
-              <div className="w-full max-w-3xl mx-auto flex justify-center items-center">
-              <AdsterraNative />
+            <div className="w-full max-w-3xl mx-auto flex justify-center items-center">
+                <AdsterraNative />
             </div>
             {/* Main Content */}
             <div className="flex justify-center py-7 mb-10">
@@ -193,10 +193,10 @@ export default function Addresspage() {
                                     type="button"
                                     onClick={() => {
                                         window.open(
-      "https://ruffianattorneymargarine.com/n61k1bpx3?key=c2414e037cc988772633834d67eb97d6",
-      "_blank",
-      "noopener,noreferrer"
-    );
+                                            "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
+                                            "_blank",
+                                            "noopener,noreferrer"
+                                        );
                                         if (!address1.trim()) {
                                             setError('Address Line 1 is required')
                                             return
@@ -214,18 +214,18 @@ export default function Addresspage() {
                         </div>
 
                     </div>
- <div className="rounded-xl border-l-4 border-yellow-400 bg-black-50  shadow-md mt-5">
-            <p className="text-yellow-100 text-l leading-6 ml-2 my-0 p-2">
-              Please ensure that the information you provide is accurate and
-              complete. Your name, contact details, and address will be used for
-              order processing and timely delivery. Any mistakes in the details may
-              cause delays or failed deliveries. Double-check your entries before
-              proceeding to the next step. Providing a valid phone number and email
-              address will also help us contact you for updates regarding your
-              order. We value your trust and make every effort to ensure a smooth
-              and hassle-free shopping experience. Thank you for choosing us!
-            </p>
-          </div>
+                    <div className="rounded-xl border-l-4 border-yellow-400 bg-black-50  shadow-md mt-5">
+                        <p className="text-yellow-100 text-l leading-6 ml-2 my-0 p-2">
+                            Please ensure that the information you provide is accurate and
+                            complete. Your name, contact details, and address will be used for
+                            order processing and timely delivery. Any mistakes in the details may
+                            cause delays or failed deliveries. Double-check your entries before
+                            proceeding to the next step. Providing a valid phone number and email
+                            address will also help us contact you for updates regarding your
+                            order. We value your trust and make every effort to ensure a smooth
+                            and hassle-free shopping experience. Thank you for choosing us!
+                        </p>
+                    </div>
                 </div>
             </div>
 

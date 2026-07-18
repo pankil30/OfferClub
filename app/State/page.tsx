@@ -52,9 +52,9 @@ export default function Statepage() {
           </h1>
         </div>
       </section>
-       <div className='mt-8 flex row'>
-             <ResponsiveAdsterraBanner />
-          </div>
+      <div className='mt-8 flex row'>
+        <ResponsiveAdsterraBanner />
+      </div>
       <div className="flex justify-center py-7 ">
         <div className="w-full max-w-3xl bg-card rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-10">
 
@@ -125,9 +125,9 @@ export default function Statepage() {
 
         </div>
       </div>
-        <div className="w-full max-w-3xl mx-auto flex justify-center items-center">
-              <AdsterraNative />
-            </div>
+      <div className="w-full max-w-3xl mx-auto flex justify-center items-center">
+        <AdsterraNative />
+      </div>
       {/* Main Content */}
       <div className="flex justify-center py-7 mb-10">
         <div className="w-full max-w-3xl bg-card rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-10">
@@ -172,10 +172,10 @@ export default function Statepage() {
                   type="button"
                   onClick={() => {
                     window.open(
-      "https://ruffianattorneymargarine.com/n61k1bpx3?key=c2414e037cc988772633834d67eb97d6",
-      "_blank",
-      "noopener,noreferrer"
-    );
+                      "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
+                      "_blank",
+                      "noopener,noreferrer"
+                    );
                     if (!state.trim()) {
                       setError('State is required')
                       return
@@ -197,7 +197,7 @@ export default function Statepage() {
 
           </div>
 
-           <div className="rounded-xl border-l-4 border-yellow-400 bg-black-50  shadow-md mt-5">
+          <div className="rounded-xl border-l-4 border-yellow-400 bg-black-50  shadow-md mt-5">
             <p className="text-yellow-100 text-l leading-6 ml-2 my-0 p-2">
               Please ensure that the information you provide is accurate and
               complete. Your name, contact details, and address will be used for

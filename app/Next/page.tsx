@@ -40,19 +40,19 @@ export default function Nextpage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-    
+
 
       {/* Page Header */}
-        <section className="bg-secondary/30 py-10 md:py-15">
-   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-secondary/30 py-10 md:py-15">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl font-bold text-foreground">
             Checkout
           </h1>
         </div>
       </section>
-<div className='mt-8 flex row'>
-             <ResponsiveAdsterraBanner />
-          </div>
+      <div className='mt-8 flex row'>
+        <ResponsiveAdsterraBanner />
+      </div>
       {/* MAIN LAYOUT */}
       <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
 
@@ -92,7 +92,7 @@ export default function Nextpage() {
           </div>
 
         </div>
-         
+
 
         {/* RIGHT - SUMMARY + BUTTON */}
         <div className="space-y-6">
@@ -130,15 +130,15 @@ export default function Nextpage() {
             {/* FIXED BUTTON INSIDE CARD */}
             <button
               type="button"
-              onClick={() =>{
-window.open(
-      "https://ruffianattorneymargarine.com/n61k1bpx3?key=c2414e037cc988772633834d67eb97d6",
-      "_blank",
-      "noopener,noreferrer"
-    );
+              onClick={() => {
+                window.open(
+                  "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
                 router.push('/thank-you')
-              } 
-            }
+              }
+              }
               className="
             w-full
             py-4
@@ -163,17 +163,17 @@ window.open(
             </p>
 
           </div>
-           
+
 
         </div>
-        
+
 
       </div>
-       <div className="w-full max-w-3xl mx-auto flex justify-center items-center">
-              <AdsterraNative />
-            </div>
+      <div className="w-full max-w-3xl mx-auto flex justify-center items-center">
+        <AdsterraNative />
+      </div>
 
-   
+
     </div>
   )
 }

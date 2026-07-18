@@ -218,7 +218,7 @@ const featuredProducts = [
 
 
       {/* HERO SECTION */}
-      <section className="bg-background">
+      {/* <section className="bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 lg:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 
@@ -261,7 +261,7 @@ const featuredProducts = [
 
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FEATURED PRODUCTS (REAL DATA) */}
       <section className="py-12 md:py-16 lg:py-20">
@@ -270,7 +270,7 @@ const featuredProducts = [
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-10">
             Featured Products
           </h2>
-          <AdsterraNative/>
+       
             {/* <AdsterraNative/> */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
 
@@ -284,7 +284,10 @@ const featuredProducts = [
                 category={product.category}
               />
             ))}
+            
           </div>
+
+             <AdsterraNative/>
 
           <div className="mt-10 text-center">
             <Link

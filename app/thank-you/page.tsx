@@ -30,9 +30,9 @@ export default function ThankYouPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
- <div className='mb-8 mt-8 flex row'>
-             <ResponsiveAdsterraBanner />
-          </div>
+      <div className='mb-8 mt-8 flex row'>
+        <ResponsiveAdsterraBanner />
+      </div>
 
       {/* Main Content */}
       <div className="flex-1 flex items-center justify-center px-4 py-16 bg-secondary">
@@ -41,7 +41,7 @@ export default function ThankYouPage() {
 
           {/* Icon */}
           <div className="flex justify-center mb-6">
-            
+
             <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center">
               <svg
                 className="w-10 h-10 text-green-600"
@@ -83,17 +83,19 @@ export default function ThankYouPage() {
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
-           <button
-      type="button"
-      onClick={() => {window.open(
-      "https://ruffianattorneymargarine.com/n61k1bpx3?key=c2414e037cc988772633834d67eb97d6",
-      "_blank",
-      "noopener,noreferrer"
-    ); router.push('/')}}
-      className="px-6 py-3 bg-primary text-primary-foreground rounded-md font-semibold hover:opacity-90 transition"
-    >
-      Continue Shopping
-    </button>
+            <button
+              type="button"
+              onClick={() => {
+                window.open(
+                  "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
+                  "_blank",
+                  "noopener,noreferrer"
+                ); router.push('/')
+              }}
+              className="px-6 py-3 bg-primary text-primary-foreground rounded-md font-semibold hover:opacity-90 transition"
+            >
+              Continue Shopping
+            </button>
 
             {/* <Link
               href="/orders"
@@ -102,17 +104,17 @@ export default function ThankYouPage() {
               View Orders
             </Link> */}
 
-             
+
 
           </div>
           <div className="w-full max-w-3xl mx-auto flex justify-center items-center mt-6">
-              <AdsterraNative />
-            </div>
+            <AdsterraNative />
+          </div>
 
         </div>
       </div>
 
-    
+
     </div>
   )
 }
