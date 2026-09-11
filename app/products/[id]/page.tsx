@@ -12,6 +12,7 @@ import { getProducts } from '@/lib/products'
 import AdsterraNative from '@/app/ads/AdsterraNative'
 import ResponsiveAdsterraBanner from '@/app/ads/ResponsiveAdsterraBanner'
 import InlineAd from '@/app/ads/InlineAd'
+import GoogleAdsense from '@/app/ads/AdsterraNative'
 
 export const dynamic = 'force-dynamic'
 
@@ -225,7 +226,7 @@ export default async function ProductDetailPage({
           <h2 className="font-serif text-3xl font-bold text-foreground mb-12">
             You Might Also Like
           </h2>
- <AdsterraNative />
+ <GoogleAdsense />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {relatedProducts.map((relatedProduct) => (
               <ProductCard

@@ -193,6 +193,7 @@ import { getProducts } from '@/lib/products'
 import AdsterraNative from './ads/AdsterraNative'
 import AdsterraBanner from './ads/AdsterraBanner'
 import ResponsiveAdsterraBanner from './ads/ResponsiveAdsterraBanner'
+import GoogleAdsense from './ads/AdsterraNative'
 
 export const dynamic = 'force-dynamic'
 
@@ -287,7 +288,7 @@ const featuredProducts = [
             
           </div>
 
-             <AdsterraNative/>
+             <GoogleAdsense/>
 
           <div className="mt-10 text-center">
             <Link
@@ -310,7 +311,7 @@ const featuredProducts = [
           </h2>
     
     <div className='mb-13'>
-                   <ResponsiveAdsterraBanner />
+                   <GoogleAdsense />
                 </div>
 
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">

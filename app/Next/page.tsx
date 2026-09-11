@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
 import AdsterraNative from '../ads/AdsterraNative'
+import GoogleAdsense from '../ads/AdsterraNative'
 
 interface CartItem {
   id: string
@@ -170,7 +171,7 @@ export default function Nextpage() {
 
       </div>
       <div className="w-full max-w-3xl mx-auto flex justify-center items-center">
-        <AdsterraNative />
+        <GoogleAdsense />
       </div>
 
 

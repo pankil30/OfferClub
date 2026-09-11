@@ -10,6 +10,7 @@ import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
 import AdsterraNative from '../ads/AdsterraNative'
 import PortraitAd from '../ads/PortraitAd'
 import router from 'next/router'
+import GoogleAdsense from '../ads/AdsterraNative'
 
 interface CartItem {
   id: string
@@ -156,7 +157,7 @@ export default function CartPage() {
                       </div>
                     </div>
                     <div className='mt-10'>
-                      <AdsterraNative />
+                      <GoogleAdsense />
                     </div>
                   </div>
                 ))}

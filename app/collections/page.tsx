@@ -105,6 +105,7 @@ import { useProducts } from '@/lib/use-products'
 import AdsterraNative from '../ads/AdsterraNative'
 import AdsterraBanner from '../ads/AdsterraBanner'
 import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
+import GoogleAdsense from '../ads/AdsterraNative'
 
 export default function CollectionsPage() {
   const { products, loading } = useProducts()
@@ -194,7 +195,7 @@ return ( <main className="min-h-screen bg-background">
                 {/* Show ad after every 12 products */}
                 {(index + 1) % 12 === 0 && index !== grouped[category].length - 1 && (
                   <div className="col-span-2 md:col-span-3 lg:col-span-4">
-                    <AdsterraNative />
+                    <GoogleAdsense />
                   </div>
                 )}
               </React.Fragment>

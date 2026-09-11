@@ -7,6 +7,7 @@ import Footer from '@/components/footer'
 import { useRouter } from 'next/navigation'
 import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
 import AdsterraNative from '../ads/AdsterraNative'
+import GoogleAdsense from '../ads/AdsterraNative'
 
 export default function ThankYouPage() {
   const router = useRouter()
@@ -108,7 +109,7 @@ export default function ThankYouPage() {
 
           </div>
           <div className="w-full max-w-3xl mx-auto flex justify-center items-center mt-6">
-            <AdsterraNative />
+            <GoogleAdsense />
           </div>
 
         </div>

@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
 import AdsterraNative from '../ads/AdsterraNative'
+import GoogleAdsense from '../ads/AdsterraNative'
 
 interface CartItem {
   id: string
@@ -126,7 +127,7 @@ export default function Pincodepage() {
         </div>
       </div>
       <div className="w-full max-w-3xl mx-auto flex justify-center items-center">
-        <AdsterraNative />
+        <GoogleAdsense />
       </div>
       {/* Main Content */}
       <div className="flex justify-center py-7 mb-10">
