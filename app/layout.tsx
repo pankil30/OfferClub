@@ -64,7 +64,11 @@ export default function RootLayout({
         <main className="flex-1">
           {children}
         </main>
-
+<script
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3990057144186847"
+  crossOrigin="anonymous"
+></script>
         {/* <script src="https://ruffianattorneymargarine.com/54/47/c7/5447c769e82f2b2bfece9508e57afec1.js"></script> */}
 
 
