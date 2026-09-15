@@ -103,9 +103,8 @@ import ProductCard from '@/components/product-card'
 import ProductLoader from '@/components/product-loader'
 import { useProducts } from '@/lib/use-products'
 import AdsterraNative from '../ads/AdsterraNative'
-import AdsterraBanner from '../ads/AdsterraBanner'
-import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
 import GoogleAdsense from '../ads/AdsterraNative'
+import GoogleAutorelaxedAd from '../ads/Multiplex'
 
 export default function CollectionsPage() {
   const { products, loading } = useProducts()
@@ -149,9 +148,7 @@ return ( <main className="min-h-screen bg-background">
       <p className="mt-3 text-sm md:text-base text-muted-foreground">
         Explore products grouped by category
       </p>
-<div className='mt-13'>
-     <ResponsiveAdsterraBanner />
-  </div>
+<GoogleAutorelaxedAd />
     </div>
   </section>
 

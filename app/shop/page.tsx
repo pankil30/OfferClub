@@ -8,9 +8,8 @@ import ProductLoader from '@/components/product-loader'
 import { useProducts } from '@/lib/use-products'
 import React from 'react'
 import AdsterraNative from '../ads/AdsterraNative'
-import AdsterraBanner from '../ads/AdsterraBanner'
-import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
 import GoogleAdsense from '../ads/AdsterraNative'
+import GoogleAutorelaxedAd from '../ads/Multiplex'
 
 
 export default function ShopPage() {
@@ -66,10 +65,7 @@ export default function ShopPage() {
             {sortedProducts.length} Products Available
           </p>
         </div>
-
-        <div className='mb-12'>
-             <ResponsiveAdsterraBanner />
-          </div>
+<GoogleAutorelaxedAd />
 
               
 

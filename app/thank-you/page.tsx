@@ -5,9 +5,9 @@ import { useEffect } from 'react'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { useRouter } from 'next/navigation'
-import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
 import AdsterraNative from '../ads/AdsterraNative'
 import GoogleAdsense from '../ads/AdsterraNative'
+import GoogleAutorelaxedAd from '../ads/Multiplex'
 
 export default function ThankYouPage() {
   const router = useRouter()
@@ -31,9 +31,7 @@ export default function ThankYouPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <div className='mb-8 mt-8 flex row'>
-        <ResponsiveAdsterraBanner />
-      </div>
+      <GoogleAutorelaxedAd />
 
       {/* Main Content */}
       <div className="flex-1 flex items-center justify-center px-4 py-16 bg-secondary">
@@ -87,11 +85,12 @@ export default function ThankYouPage() {
             <button
               type="button"
               onClick={() => {
-                window.open(
-                  "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
-                  "_blank",
-                  "noopener,noreferrer"
-                ); router.push('/')
+                // window.open(
+                //   "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
+                //   "_blank",
+                //   "noopener,noreferrer"
+                // ); 
+                router.push('/')
               }}
               className="px-6 py-3 bg-primary text-primary-foreground rounded-md font-semibold hover:opacity-90 transition"
             >

@@ -10,9 +10,8 @@ import ProductGallery from '@/components/product-gallery'
 
 import { getProducts } from '@/lib/products'
 import AdsterraNative from '@/app/ads/AdsterraNative'
-import ResponsiveAdsterraBanner from '@/app/ads/ResponsiveAdsterraBanner'
-import InlineAd from '@/app/ads/InlineAd'
 import GoogleAdsense from '@/app/ads/AdsterraNative'
+import GoogleAutorelaxedAd from '@/app/ads/Multiplex'
 
 export const dynamic = 'force-dynamic'
 
@@ -217,9 +216,7 @@ export default async function ProductDetailPage({
           </div>
         </div>
       </section>
- <div className='mb-12'>
-             <ResponsiveAdsterraBanner />
-          </div>
+      <GoogleAutorelaxedAd />
       {/* Related Products */}
       <section className="py-20 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

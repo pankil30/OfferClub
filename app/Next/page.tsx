@@ -6,9 +6,9 @@ import Footer from '@/components/footer'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
 import AdsterraNative from '../ads/AdsterraNative'
 import GoogleAdsense from '../ads/AdsterraNative'
+import GoogleAutorelaxedAd from '../ads/Multiplex'
 
 interface CartItem {
   id: string
@@ -51,9 +51,7 @@ export default function Nextpage() {
           </h1>
         </div>
       </section>
-      <div className='mt-8 flex row'>
-        <ResponsiveAdsterraBanner />
-      </div>
+      <GoogleAutorelaxedAd />
       {/* MAIN LAYOUT */}
       <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
 
@@ -132,11 +130,11 @@ export default function Nextpage() {
             <button
               type="button"
               onClick={() => {
-                window.open(
-                  "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
-                  "_blank",
-                  "noopener,noreferrer"
-                );
+                // window.open(
+                //   "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
+                //   "_blank",
+                //   "noopener,noreferrer"
+                // );
                 router.push('/thank-you')
               }
               }

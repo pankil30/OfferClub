@@ -2,13 +2,13 @@
 
 import { useEffect } from "react";
 
-export default function GoogleAdsense() {
+export default function GoogleAutorelaxedAd() {
   useEffect(() => {
     try {
       // @ts-ignore
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch (err) {
-      console.error("Adsense error:", err);
+      console.error("AdSense error:", err);
     }
   }, []);
 
@@ -17,9 +17,8 @@ export default function GoogleAdsense() {
       className="adsbygoogle"
       style={{ display: "block" }}
       data-ad-client="ca-pub-3990057144186847"
-      data-ad-slot="8487318465"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
+      data-ad-slot="8076254925"
+      data-ad-format="autorelaxed"
     />
   );
 }

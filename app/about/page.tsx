@@ -4,7 +4,7 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { Award, Leaf, Heart, Users } from 'lucide-react'
 import Image from 'next/image'
-import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
+import GoogleAutorelaxedAd from '../ads/Multiplex'
 
 const values = [
   {
@@ -44,9 +44,7 @@ export default function AboutPage() {
               Crafting elegance and luxury for the discerning customer since 2015
             </p>
           </div>
-          <div className='mt-13'>
-               <ResponsiveAdsterraBanner />
-          </div>
+         <GoogleAutorelaxedAd />
         </section>
 
         {/* Story Section */}

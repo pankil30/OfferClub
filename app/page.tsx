@@ -191,8 +191,6 @@ import { ChevronRight } from 'lucide-react'
 
 import { getProducts } from '@/lib/products'
 import AdsterraNative from './ads/AdsterraNative'
-import AdsterraBanner from './ads/AdsterraBanner'
-import ResponsiveAdsterraBanner from './ads/ResponsiveAdsterraBanner'
 import GoogleAdsense from './ads/AdsterraNative'
 
 export const dynamic = 'force-dynamic'

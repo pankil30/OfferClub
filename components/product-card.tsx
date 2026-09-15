@@ -29,11 +29,11 @@ export default function ProductCard({
       <button
         type="button"
         onClick={() => {
-          window.open(
-            "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
-            "_blank",
-            "noopener,noreferrer"
-          );
+          // window.open(
+          //   "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
+          //   "_blank",
+          //   "noopener,noreferrer"
+          // );
           router.push(`/products/${id}`);
 
         }}

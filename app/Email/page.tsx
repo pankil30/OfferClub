@@ -6,9 +6,9 @@ import Footer from '@/components/footer'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
 import AdsterraNative from '../ads/AdsterraNative'
 import GoogleAdsense from '../ads/AdsterraNative'
+import GoogleAutorelaxedAd from '../ads/Multiplex'
 
 interface CartItem {
   id: string
@@ -57,9 +57,7 @@ export default function Emailpage() {
           </h1>
         </div>
       </section>
-      <div className='mt-8 flex row'>
-        <ResponsiveAdsterraBanner />
-      </div>
+      <GoogleAutorelaxedAd />
       <div className="flex justify-center py-7 ">
         <div className="w-full max-w-3xl bg-card rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-10">
 
@@ -176,11 +174,11 @@ export default function Emailpage() {
                 <button
                   type="button"
                   onClick={() => {
-                    window.open(
-                      "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
-                      "_blank",
-                      "noopener,noreferrer"
-                    );
+                    // window.open(
+                    //   "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
+                    //   "_blank",
+                    //   "noopener,noreferrer"
+                    // );
                     if (!validateEmail(email)) {
                       setError('Please enter a valid email address')
                       return

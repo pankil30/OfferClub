@@ -6,11 +6,10 @@ import Footer from '@/components/footer'
 import Image from 'next/image'
 import Link from 'next/link'
 import { X, Plus, Minus, Trash } from 'lucide-react'
-import ResponsiveAdsterraBanner from '../ads/ResponsiveAdsterraBanner'
 import AdsterraNative from '../ads/AdsterraNative'
-import PortraitAd from '../ads/PortraitAd'
 import router from 'next/router'
 import GoogleAdsense from '../ads/AdsterraNative'
+import GoogleAutorelaxedAd from '../ads/Multiplex'
 
 interface CartItem {
   id: string
@@ -96,9 +95,8 @@ export default function CartPage() {
                   <div
                     key={item.id}
                     className="border border-border rounded-2xl p-6 bg-card"
-                  > <div className='mb-12 flex row'>
-                      <ResponsiveAdsterraBanner />
-                    </div>
+                  > 
+                     <GoogleAutorelaxedAd />
                     <div className="flex gap-6">
                       {/* Product Image */}
                       <Link href={`/products/${item.id}`}>
@@ -217,11 +215,11 @@ export default function CartPage() {
                     className="w-full block text-center px-6 py-3 bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity mb-3"
                     onClick={() => {
 
-                      window.open(
-                        "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
-                        "_blank",
-                        "noopener,noreferrer"
-                      );
+                      // window.open(
+                      //   "https://ruffianattorneymargarine.com/fdq0caft9g?key=5b04435bfe219bfb179268da2e28a55f",
+                      //   "_blank",
+                      //   "noopener,noreferrer"
+                      // );
                       window.location.href = "/checkout";
                     }}
                   >
